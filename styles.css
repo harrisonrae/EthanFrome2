@@ -18,6 +18,13 @@ body {
     display: flex; /* Flexbox layout for image and button */
     align-items: center; /* Align items vertically */
     gap: 20px; /* Space between image and button */
+    opacity: 1; /* Fully visible by default */
+    transition: opacity 0.5s ease; /* Smooth transition when displayed */
+}
+
+.hidden {
+    opacity: 0; /* Fully transparent */
+    visibility: hidden; /* Hides it from layout (not clickable) */
 }
 
 .centered-image {

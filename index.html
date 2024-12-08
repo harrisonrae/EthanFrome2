@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Image</title>
-    <link rel="stylesheet" href="docs/styles.css">
+    <title>Centered Image with Play Button</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Image Container -->
-    <div class="image-container">
-        <img src="docs/3 (1).PNG" alt="Centered Image">
-
-        <button class="play-button">Play</button>
+    <!-- Image and Button Container -->
+    <div class="content-container hidden" id="contentContainer">
+        <!-- Centered Image -->
+        <img src="docs/3 (1).PNG" alt="Centered Image" class="centered-image">
+        
+        <!-- Play Button -->
+        <button class="play-button" id="playButton">Play</button>
     </div>
 
-       <!-- Audio File -->
-       <audio id="audio" src="docs/Untitled Session 2_mixdown.mp3"></audio>
+    <!-- Audio File -->
+    <audio id="audio" src="docs/Untitled Session 2_mixdown.mp3"></audio>
 
-    
-
+    <script src="script.js"></script>
 </body>
 </html>
