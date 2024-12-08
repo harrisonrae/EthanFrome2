@@ -4,26 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethan Frome Performance 2024</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <!-- Image and Button Container -->
-    <div class="content-container hidden" id="contentContainer">
-        <!-- Centered Image -->
-        <img src="docs/media/image000000.JPG" alt="Centered Image" class="centered-image">
-        
-        <!-- Play Button -->
-        <button class="play-button" id="playButton">Play</button>
-  
-    </div>
-
-    <!-- Audio File -->
-    <audio id="audio" src="docs/media/Untitled Session 2_mixdown.mp3"></audio>
-
-
-
-
+    
 <style>
 
     /* Reset basic styles */
@@ -85,29 +66,50 @@ body {
 
 
 </style>
+</head>
+
+
+<body>
+
+    <!-- Image and Button Container -->
+    <div class="content-container hidden" id="contentContainer">
+        <!-- Centered Image -->
+        <img src="docs/media/image000000.JPG" alt="Centered Image" class="centered-image">
+        
+        <!-- Play Button -->
+        <button class="play-button" id="playButton">Play</button>
+  
+    </div>
+
+    <!-- Audio File -->
+    <audio id="audio" src="docs/media/Untitled Session 2_mixdown.mp3"></audio>
 
 
 
 
 
 
-    <script> 
-        // Select the button, audio, and content container elements
-const playButton = document.getElementById('playButton');
-const audio = document.getElementById('audio');
-const contentContainer = document.getElementById('contentContainer');
 
-// Event listener for when the audio is fully loaded
-audio.addEventListener('loadeddata', () => {
-    // Remove the 'hidden' class to reveal the image and button
-    contentContainer.classList.remove('hidden');
-});
 
-// Event listener for button click to play the audio
-playButton.addEventListener('click', () => {
-    audio.play();
-});
 
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audio = document.getElementById('audio');
+        const contentContainer = document.getElementById('contentContainer');
+        const imageElement = document.getElementById('imageElement');
+
+        // Ensure audio and image are loaded before showing the container
+        audio.addEventListener('loadeddata', () => {
+            contentContainer.classList.remove('hidden');
+        });
+
+        imageElement.addEventListener('load', () => {
+            contentContainer.classList.remove('hidden');
+        });
+
+        playButton.addEventListener('click', () => {
+            audio.play();
+        });
     </script>
 </body>
 </html>
