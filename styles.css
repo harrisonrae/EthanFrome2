@@ -33,7 +33,7 @@ body {
     left: 0;
     width: 100%; /* Full width of the screen */
     height: 100%; /* Full height of the screen */
-    background-image: url('your-image.jpg'); /* Fullscreen background image */
+    background-image: url('docs/image000000.JPG'); /* Fullscreen background image */
     background-size: cover; /* Makes the image cover the entire screen */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
