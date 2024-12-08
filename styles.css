@@ -28,15 +28,25 @@ body {
 }
 
 .centered-image {
-    max-width: 100%; /* Make sure image doesn't overflow screen */
-    height: auto; /* Maintain image aspect ratio */
-    border-radius: 10px; /* Optional: Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow for effect */
+    position: fixed; /* Cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the screen */
+    height: 100%; /* Full height of the screen */
+    background-image: url('your-image.jpg'); /* Fullscreen background image */
+    background-size: cover; /* Makes the image cover the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    opacity: 1; /* Fully visible by default */
+    transition: opacity 0.5s ease; /* Smooth transition when displayed */
 }
-
 .play-button {
-    background-color: #6200ea; /* Button background color */
+    background-color: #00000000; /* Button background color */
     color: #fff; /* White text */
+    position: absolute; /* Position relative to the container */
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    width: 60px; /* Set width of the play icon */
     border: none; /* No border */
     padding: 15px 30px; /* Padding for button */
     font-size: 18px; /* Font size of button text */
@@ -45,6 +55,3 @@ body {
     transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
-.play-button:hover {
-    background-color: #3700b3; /* Darker color on hover */
-}
