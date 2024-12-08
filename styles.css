@@ -1,0 +1,43 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh; /* Full height of the viewport */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #f4f4f9; /* Light background color */
+    font-family: Arial, sans-serif;
+}
+
+.content-container {
+    display: flex; /* Flexbox layout for image and button */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between image and button */
+}
+
+.centered-image {
+    max-width: 100%; /* Make sure image doesn't overflow screen */
+    height: auto; /* Maintain image aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow for effect */
+}
+
+.play-button {
+    background-color: #6200ea; /* Button background color */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    padding: 15px 30px; /* Padding for button */
+    font-size: 18px; /* Font size of button text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.play-button:hover {
+    background-color: #3700b3; /* Darker color on hover */
+}
